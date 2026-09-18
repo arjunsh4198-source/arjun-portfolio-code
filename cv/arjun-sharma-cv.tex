@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,top=1.65cm,bottom=1.55cm,left=1.75cm,right=1.75cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{tikz}
+
+\definecolor{navy}{HTML}{17233B}
+\definecolor{blue}{HTML}{4568F2}
+\definecolor{muted}{HTML}{52617A}
+
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.08}
+\setlist[itemize]{leftmargin=1.2em,nosep,topsep=4pt}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{13pt}%
+  {\large\bfseries\color{navy}#1}\par
+  \vspace{3pt}{\color{blue}\rule{\linewidth}{0.8pt}}\vspace{5pt}
+}
+
+% Small vector icons; no icon-font package is required.
+\newcommand{\iconframe}[1]{%
+  \tikz[baseline=-0.55ex]{%
+    \draw[blue,line width=.55pt,rounded corners=.025cm]
+      (0,0) rectangle (.27,.27);
+    #1
+  }%
+}
+\newcommand{\iconlocation}{\iconframe{%
+  \draw[blue,line width=.6pt]
+    (.135,.045) .. controls (.04,.14) and (.075,.225) .. (.135,.225)
+    .. controls (.195,.225) and (.23,.14) .. (.135,.045);
+  \fill[blue] (.135,.16) circle (.018);
+}}
+\newcommand{\iconphone}{\iconframe{%
+  \draw[blue,line width=.6pt,rounded corners=.01cm]
+    (.085,.045) rectangle (.185,.225);
+  \fill[blue] (.135,.065) circle (.007);
+}}
+\newcommand{\iconmail}{\iconframe{%
+  \draw[blue,line width=.6pt] (.045,.075) rectangle (.225,.195);
+  \draw[blue,line width=.6pt]
+    (.045,.195)--(.135,.13)--(.225,.195);
+}}
+\newcommand{\iconweb}{\iconframe{%
+  \draw[blue,line width=.6pt] (.135,.135) circle (.085);
+  \draw[blue,line width=.6pt] (.05,.135)--(.22,.135);
+  \draw[blue,line width=.6pt] (.135,.05) ellipse (.035 and .085);
+}}
+\newcommand{\iconcode}{\iconframe{%
+  \draw[blue,line width=.7pt] (.1,.075)--(.055,.135)--(.1,.195);
+  \draw[blue,line width=.7pt] (.17,.075)--(.215,.135)--(.17,.195);
+}}
+\newcommand{\iconnetwork}{\iconframe{%
+  \node[text=blue,font=\fontsize{6}{6}\selectfont\bfseries]
+    at (.135,.135) {in};
+}}
+\newcommand{\contact}[2]{#1\hspace{6pt}#2}
+
+\begin{document}
+\RaggedRight
+
+{\fontsize{25}{28}\selectfont\bfseries\color{navy}Arjun Sharma}\par
+\vspace{4pt}
+{\normalsize\bfseries\color{blue}BSc Computer Science Student}\par
+\vspace{9pt}
+
+{\small\color{muted}
+\begin{tabularx}{\linewidth}{@{}XXX@{}}
+\contact{\iconlocation}{Berlin, Germany} &
+\contact{\iconphone}{015901445590} &
+\contact{\iconmail}{\href{mailto:Arjunhry2006@gmail.com}{Arjunhry2006@gmail.com}} \\[6pt]
+\contact{\iconweb}{\href{https://portfoliourl.com}{Portfolio}} &
+\contact{\iconcode}{\href{https://github.com/arjunsh4198-source}{GitHub}} &
+\contact{\iconnetwork}{\href{https://www.linkedin.com/in/arjun-sharma-3b1b25358/}{LinkedIn}} \\
+\end{tabularx}
+}
+
+\cvsection{Professional Summary}
+BSc Computer Science student at Gisma University of Applied Sciences,
+expected to graduate in 2028. Building a foundation in web development,
+Python programming and databases through practical projects. Interested
+in creating clear, useful software and continuing to learn through
+hands-on work.
+
+\cvsection{Education}
+\textbf{BSc Computer Science}\hfill
+{\color{muted}Expected graduation: 2028}\par
+Gisma University of Applied Sciences\par
+{\color{muted}Currently in the second semester.}
+
+\cvsection{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\raggedright\arraybackslash}p{4.0cm}X@{}}
+Web development & HTML, CSS, JavaScript \\
+Programming \& data & Python, pandas, matplotlib \\
+Databases & SQL, MySQL \\
+Development tools & Git, GitHub, GitHub Pages, VS Code, LaTeX \\
+\end{tabularx}
+
+\cvsection{Projects}
+\textbf{Personal Computer Science Portfolio}\par
+Built a responsive website to present education, skills and projects.
+Used HTML, CSS and JavaScript for the layout, mobile navigation and
+project filtering, alongside an animated SVG illustration.
+
+\vspace{7pt}
+\textbf{Expense Tracker}\hfill{\color{muted}Python}\par
+Created a command-line tool that records expenses in CSV format,
+summarises spending with pandas and saves a category chart using
+matplotlib.
+
+\vspace{7pt}
+\textbf{Library Database}\hfill{\color{muted}MySQL}\par
+Designed related tables for books, members and loans, with sample data
+and SQL queries for viewing current loans and borrowing activity.
+
+\cvsection{Interests}
+Reading books \quad\textbullet\quad Cricket \quad\textbullet\quad Coding
+\quad\textbullet\quad Chess \quad\textbullet\quad Esports
+\quad\textbullet\quad Music
+
+\end{document}

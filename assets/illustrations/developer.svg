@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" role="img" aria-labelledby="title">
+  <title id="title">Illustration of a student working at a laptop</title>
+  <style>
+    .code { animation: glow 2.4s ease-in-out infinite alternate; }
+    .code.second { animation-delay: .7s; }
+    .code.third { animation-delay: 1.3s; }
+    .typing { transform-origin: 376px 358px; animation: type 0.55s ease-in-out infinite alternate; }
+    .spark { animation: rise 3s ease-in-out infinite; }
+    .spark.two { animation-delay: 1.2s; }
+    @keyframes glow { from { opacity: .35; } to { opacity: 1; } }
+    @keyframes type { from { transform: rotate(-2deg); } to { transform: rotate(3deg); } }
+    @keyframes rise {
+      0%, 100% { transform: translateY(5px); opacity: .45; }
+      50% { transform: translateY(-8px); opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <!-- Background accents -->
+  <circle cx="301" cy="254" r="188" fill="#dce6ff"/>
+  <circle cx="462" cy="104" r="13" fill="#31b6ad" opacity=".75"/>
+  <circle cx="109" cy="309" r="9" fill="#4568f2" opacity=".6"/>
+  <path class="spark" d="M111 132l8-13 8 13-8 13z" fill="#31b6ad"/>
+  <path class="spark two" d="M488 219l6-10 6 10-6 10z" fill="#4568f2"/>
+  <path d="M116 211h34m-17-17v34M455 311h28m-14-14v28" stroke="#4568f2" stroke-width="4" stroke-linecap="round" opacity=".35"/>
+
+  <!-- Floating code window -->
+  <g transform="translate(95 115) rotate(-7)">
+    <rect width="144" height="109" rx="14" fill="#fff" stroke="#d8e1fa" stroke-width="2"/>
+    <path d="M0 27h144" stroke="#e8ecf7" stroke-width="2"/>
+    <circle cx="15" cy="14" r="4" fill="#f58b93"/>
+    <circle cx="28" cy="14" r="4" fill="#f2c86a"/>
+    <circle cx="41" cy="14" r="4" fill="#31b6ad"/>
+    <path class="code" d="M19 47h29m12 0h43" stroke="#4568f2" stroke-width="7" stroke-linecap="round"/>
+    <path class="code second" d="M30 65h53m11 0h23" stroke="#31b6ad" stroke-width="7" stroke-linecap="round"/>
+    <path class="code third" d="M19 83h36m12 0h31" stroke="#9faee4" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Chair -->
+  <rect x="341" y="263" width="92" height="152" rx="34" fill="#384cc0"/>
+  <rect x="352" y="274" width="69" height="124" rx="27" fill="#506af0"/>
+
+  <!-- Hair, face and neck -->
+  <path d="M249 207c-2-48 31-79 75-77 44 2 70 35 65 78l-19 25-105 1z" fill="#17233b"/>
+  <ellipse cx="321" cy="229" rx="60" ry="72" fill="#d99d79"/>
+  <path d="M263 207c8-48 40-70 81-65 26 3 43 21 46 49-18-2-30-14-39-25-19 25-51 37-88 41z" fill="#17233b"/>
+  <path d="M263 221c-14-9-23 2-19 17 3 12 11 17 22 17m112-34c14-9 23 2 19 17-3 12-11 17-22 17" fill="#d99d79"/>
+  <path d="M304 288v37h43v-37" fill="#c98767"/>
+  <path d="M291 226h10m44 0h10" stroke="#17233b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M318 259q9 8 19 0" fill="none" stroke="#8d5148" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Hoodie -->
+  <path d="M260 310q27-19 43-17l23 29 21-29q27 2 50 22l27 106H221z" fill="#4568f2"/>
+  <path d="M302 294l24 28-17 30-36-43m74-15l-21 28 17 30 39-45" fill="#3453cc"/>
+  <path d="M318 343v73" stroke="#a7b9ff" stroke-width="3"/>
+  <path d="M299 347v29m50-29v29" stroke="#edf2ff" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Arms and hands -->
+  <path d="M252 326q-31 15-47 67l80 26 15-32-48-24z" fill="#4568f2"/>
+  <path d="M390 328q25 15 27 66l-86 21-10-28 60-25z" fill="#4568f2"/>
+  <path d="M281 383q30 3 45 19l-8 24q-32-8-55-15z" fill="#d99d79"/>
+  <g class="typing">
+    <path d="M366 380q25-8 44 4l-6 28q-27 0-46 12l-14-22z" fill="#d99d79"/>
+  </g>
+
+  <!-- Desk and laptop -->
+  <rect x="114" y="418" width="386" height="17" rx="8" fill="#273451"/>
+  <path d="M239 307h181l-28 111H267z" fill="#243858"/>
+  <path d="M249 315h161l-24 95H273z" fill="#344d77"/>
+  <circle cx="329" cy="365" r="14" fill="#31b6ad"/>
+  <path d="M322 365l6 6 11-12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M226 416h185l-8 8H234z" fill="#17233b"/>
+  <path d="M153 435v31m311-31v31" stroke="#273451" stroke-width="12" stroke-linecap="round"/>
+</svg>
